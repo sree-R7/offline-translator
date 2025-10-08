@@ -1,0 +1,14 @@
+
+
+# --- ONNX Runtime (pick best EP automatically) ---
+# On Windows, DirectML gives GPU/NPU acceleration where available.
+onnxruntime-directml==1.19.*; platform_system=="Windows"
+# Fallback for non-Windows dev or if you want CPU only:
+onnxruntime==1.19.*; platform_system!="Windows"
+# Core dependencies for ONNX translation
+transformers>=4.30.0
+numpy>=1.24.0
+sounddevice>=0.4.7
+soundfile>=0.12
+PyYAML>=6.0
+rich>=13.7
